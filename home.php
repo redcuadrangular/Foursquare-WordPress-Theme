@@ -95,7 +95,7 @@ get_header(); ?>
     		<? } ?>
     	</table>
 	</div><!--end info-->
-</div><!--end content-->
+</section><!--end content-->
 <?php include ('sidebar-footer.php'); ?>
 </div><!--end container (in header.php)-->
 <?php get_footer(); ?>
