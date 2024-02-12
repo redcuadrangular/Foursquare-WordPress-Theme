@@ -93,7 +93,11 @@ function foursquare_setup() {
 
 	// Add a way for the custom header to be styled in the admin panel that controls
 	// custom headers. See foursquare_admin_header_style(), below.
-	add_custom_image_header( '', 'foursquare_admin_header_style' );
+	// TODO: add_custom_image_header is deprecated
+//	add_custom_image_header( '', 'foursquare_admin_header_style' );
+
+
+
 
 	// ... and thus ends the custom header business.
 }

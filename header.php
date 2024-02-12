@@ -38,12 +38,12 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_url'); ?>/assets/images/apple-touch-icon-114x114.png">
 
 	<!-- Modernizr -->
-	<script src="<?php echo home_url('/') ?><?php bloginfo('template_url'); ?>/assets/js/modernizr.custom-min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/assets/js/modernizr.custom-min.js"></script>
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-	<!-- Google Analytics -->
+		<!-- Google Analytics -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', '<?php echo get_option('nt_analytics'); ?>']);
@@ -59,6 +59,7 @@
 		})();
 	</script>
 	<?php wp_head(); ?>
+	<script src="<?php bloginfo('template_url'); ?>/assets/js/jquery.tablesorter.js"></script>
 </head>
 
 <body <?php body_class(); ?> onload="prettyPrint()">
