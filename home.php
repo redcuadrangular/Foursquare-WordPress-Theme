@@ -40,8 +40,10 @@ get_header(); ?>
     			if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] ); }
 			}
 		?>	
+		<?php if(get_option('nt_maplink')): ?>
 		<h1><?php echo get_option('nt_maptitle'); ?></h1>
 		<iframe width="570" height="240" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo get_option('nt_maplink'); ?>&output=embed"></iframe>
+		<?php endif ?>
 		<h2>Service Times</h2>
 		<table class="table table-striped table-condensed">
 			<? /* Check for Sunday */
