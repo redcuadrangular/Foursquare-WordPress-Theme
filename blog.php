@@ -19,19 +19,19 @@ get_header(); ?>
 		query_posts( 'showposts=4&posts_per_page=4&paged=' .$paged );
 		// The Loop
 		while ( have_posts() ) : the_post(); ?>
-    
+
     	<article class="summary">
     		<?php
 			if(has_post_thumbnail()) :?>
 				<a href="<?php the_permalink(); ?>"><span class="featured-image alignleft"><?php echo get_the_post_thumbnail( $id, 'thumbnail' ); ?></span></a>
 			<?php endif;?>
-    		
+
     		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     		<h2><small>Posted in: &nbsp;<a href="<?php bloginfo('url'); ?>/category/<?php $category = get_the_category(); echo $category[0]->category_nicename; ?>" title="<?php echo $category[0]->category_nicename; ?>"><?php $category = get_the_category(); echo $category[0]->cat_name;?></a></small></h2>
     		<?php the_excerpt(); ?>
        	</article><!--end post-->
 		<?php endwhile; ?>
-	
+
 		<?php /* Display pagination */ ?>
 		<div class="pagination">
 			<?php echo paginate_links( $args ) ?>

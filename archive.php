@@ -38,7 +38,7 @@ get_header(); ?>
 				<?php _e( 'Blog Archives', 'twentyten' ); ?>
 			<?php endif; ?>
 		</h5>
-            
+
     <hr />
 
 		<?php

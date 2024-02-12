@@ -13,7 +13,7 @@ get_header(); ?>
 	<section id="blog" class="span7">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<p><a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php esc_attr( printf( __( 'Return to %s', 'twentyten' ), get_the_title( $post->post_parent ) ) ); ?>" rel="gallery">
-				<?php 
+				<?php
 					/* translators: %s - title of parent post */
 					printf( __( '<span>«</span> %s', 'twentyten' ), get_the_title( $post->post_parent ) );
 				?>
@@ -52,7 +52,7 @@ get_header(); ?>
 				$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
 			else
 			// or get the URL of the first image attachment
-				$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID ); } 
+				$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID ); }
 			else {
 			// or, if there's only 1 image attachment, get the URL of the image
 				$next_attachment_url = wp_get_attachment_url();

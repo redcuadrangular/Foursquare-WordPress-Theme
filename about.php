@@ -20,10 +20,10 @@ get_header(); ?>
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 		<?php endwhile; ?>
-	</section><!--end page-->                   
+	</section><!--end page-->
 
 <?php include ('sidebar-about.php'); ?>
-</div><!--end row-->  
+</div><!--end row-->
 
 <?php include ('sidebar-footer.php'); ?>
 
