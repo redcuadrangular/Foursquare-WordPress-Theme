@@ -16,7 +16,7 @@
 			<div class="span4">
 				<li class="widget-container widget-text">
 					<h2 class="widget-title">Latest Sermon</h2>
-					<div class-"textwidget">
+					<div class="textwidget">
 						<?php // Get the latest sermon post 
 						query_posts( 'post_type=sermons&showposts=1');
 						while ( have_posts() ) : the_post(); ?>
