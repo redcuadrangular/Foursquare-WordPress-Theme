@@ -148,10 +148,10 @@ array( "type" => "close"),
 function mytheme_add_admin() {
  
 global $themename, $shortname, $options;
- 
-if ( $_GET['page'] == basename(__FILE__) ) {
- 
-	if ( 'save' == $_REQUEST['action'] ) {
+$page = isset($_GET['page']) ?? $_GET['page'];
+$action = isset($_REQUEST['action']) ?? $_REQUEST['action'];
+if ( $page == basename(__FILE__) ) {
+	if ( 'save' == $action ) {
  
 		foreach ($options as $value) {
 		update_option( $value['id'], $_REQUEST[ $value['id'] ] ); }
@@ -163,7 +163,7 @@ foreach ($options as $value) {
 die;
  
 } 
-else if( 'reset' == $_REQUEST['action'] ) {
+else if( 'reset' == $action ) {
  
 	foreach ($options as $value) {
 		delete_option( $value['id'] ); }
@@ -189,8 +189,8 @@ function mytheme_admin() {
 global $themename, $shortname, $options;
 $i=0;
  
-if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
-if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
+if ( isset($_REQUEST['saved']) ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
+if ( isset($_REQUEST['reset']) ) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings reset.</strong></p></div>';
  
 ?>
 <div class="wrap rm_wrap">
