@@ -17,10 +17,10 @@
 	 * some default sidebar stuff just in case.
 	 */
 	if ( ! dynamic_sidebar( 'subpage-widget-area' ) ) : ?>
-		<li>
+		<div>
             <h3 id="searchhead">Search For</h3>
 			<?php get_search_form(); ?>
-		</li>
+		</div>
 <?php endif; // end subpage widget area ?>
 
 </aside>
